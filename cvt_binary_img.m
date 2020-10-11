@@ -15,8 +15,8 @@ for i=1:height
 end
 
 binImg = im2bw(img2);
-figure();
-imshow(binImg);
-title('Binary Image');
+% figure();
+% imshow(binImg);
+% title('Binary Image');
 end
 

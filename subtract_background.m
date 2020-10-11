@@ -6,8 +6,8 @@ function [noBckgrnd,height,width,depth] = subtract_background(origImage,origBckg
 [heightB,widthB,depthB] = size(origBckgrnd);
 
 noBckgrnd = origBckgrnd - origImage;
-figure();
-imshow(noBckgrnd);
-title('Background Subtraction Image');
+% figure();
+% imshow(noBckgrnd);
+% title('Background Subtraction Image');
 end
 
