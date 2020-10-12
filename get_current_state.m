@@ -14,7 +14,7 @@ for i = 1:nColors
     stats = regionprops(masks{i});
     for j = 1:size(stats)
         angle = get_angle([dims(4),dims(5)],stats(j).Centroid);
-        fprintf("Color %s at angle = %0.4f\n",state.key{i+1,2},angle);
+%         fprintf("Color %s at angle = %0.4f\n",state.key{i+1,2},angle);
         for k = 1:length(state.wells)
             lower = (angle - 360/(length(state.wells)*2));
             upper = (angle + 360/(length(state.wells)*2));
@@ -25,9 +25,9 @@ for i = 1:nColors
         end
     end
 end
-clc;
-for i = 1:length(state.wells)
-    fprintf("Well %0.0f contains the color %s\n",i,state.key{state.wells(i)+1,2});
-end
+% clc;
+% for i = 1:length(state.wells)
+%     fprintf("Well %0.0f contains the color %s\n",i,state.key{state.wells(i)+1,2});
+% end
 end
 
