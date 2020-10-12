@@ -8,8 +8,9 @@ preview(cam);
 %Setup bg
 input("Capturing Snapshot of Background (Remove all stickers)...");
 bg = snapshot(cam);
-figure();
-imshow(bg);
+
+% figure();
+% imshow(bg);
 closePreview(cam);
 end
 
