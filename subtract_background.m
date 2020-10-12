@@ -6,6 +6,11 @@ function [noBckgrnd,height,width,depth] = subtract_background(origImage,origBckg
 [heightB,widthB,depthB] = size(origBckgrnd);
 
 noBckgrnd = origBckgrnd - origImage;
+
+%fix discoloring of image
+bin = cvt_binary_img(noBckgrnd);
+noBckgrnd = origImage.*uint8(bin);
+
 % figure();
 % imshow(noBckgrnd);
 % title('Background Subtraction Image');

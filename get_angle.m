@@ -6,8 +6,14 @@ function [angle] = get_angle(center,centroid)
  angleRad = atan2(diff(2),diff(1));
  angle = rad2deg(angleRad);
  angle = round(angle,0);
- if (angle < 0)
+ angle = angle - 90;
+%  if (angle < 0)
+%      angle = angle + 360;
+%  end
+ if (angle <= -180)
      angle = angle + 360;
+ elseif (angle > 180)
+     angle = angle - 360;
  end
 end
 
