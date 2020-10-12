@@ -1,7 +1,8 @@
-function [binImg] = cvt_binary_img(img,height,width)
+function [binImg] = cvt_binary_img(img)
 %cvt_binary_img Summary of this function goes here
 %   Detailed explanation goes here
 img2 = img;
+[height,width,depth] = size(img);
 for i=1:height
     for j=1:width
         if (img(i,j,1) > 2) || ...
