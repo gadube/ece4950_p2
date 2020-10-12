@@ -25,6 +25,6 @@ gameState.wellBins = rad2deg(linspace(0,2*pi,numWells*2)) - 180;
 wellLocs = rad2deg(linspace(0,2*pi,numWells+1));
 wellLocs = wellLocs(1:numWells);
 gameState.wellLocs = wellLocs - (wellLocs > 180)*360;
-gameState.wells = zeros(numWells);
+gameState.wells = zeros(1,numWells);
 end
 
