@@ -4,14 +4,14 @@ currentImg = snapshot(cam);
 state = create_img_struct(currentImg,background,nWells);
 dims = state.img.dims;
 [Rmask,Ymask,Gmask,Bmask] = detect_colors(state);
-masks = {Rmask,Gmask,Ymask,Bmask};
+state.masks = {Rmask,Gmask,Ymask,Bmask};
 
 %find current board state
 for i = 1:nColors
-%      colored = state.img.ori .* uint8(masks{i});
+%      colored = state.img.ori .* uint8(state.masks{i});
 %      figure();
 %      imshow(colored);
-    stats = regionprops(masks{i});
+    stats = regionprops(state.masks{i});
     for j = 1:size(stats)
         angle = get_angle([dims(4),dims(5)],stats(j).Centroid);
 %         fprintf("Color %s at angle = %0.4f\n",state.key{i+1,2},angle);

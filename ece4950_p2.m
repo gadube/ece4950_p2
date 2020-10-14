@@ -13,6 +13,7 @@ while 1
     state = get_current_state(cam,background,nColors,nWells);
     wells(i,:) = state.wells;
     state.wells = mode(wells);
-    print_state(state);
+    print_state(state,2);
     i = mod((i + 1),3)+1;
+    pause(3);
 end
