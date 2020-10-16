@@ -6,7 +6,6 @@ clear;close all;
 % background = bg;
 nColors = 4; %Red,Yellow,Green,Blue
 nWells = 8;
-input("Hit Enter to Begin...");
 i=1;
 wells = zeros(1,nWells);
 while 1
