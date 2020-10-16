@@ -1,6 +1,6 @@
 function [gameState] = create_img_struct(origImg,backgnd,numWells)
 %create_img_struct Create game state struct
-SE = strel('disk',20);
+SE = strel('disk',10);
 
 imgStruct.ori = origImg;
 imgStruct.bg  = backgnd;
