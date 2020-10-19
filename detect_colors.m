@@ -6,7 +6,7 @@ image = gameState.img.clean;
 R = image(:,:,1) >= 60 & image(:,:,2) < 90 & image(:,:,3) < 190;
 G = image(:,:,1) < 80 & image(:,:,2) >= 50 & image(:,:,3) < 100;
 Y = image(:,:,1) >= 95 & image(:,:,2) >= 80 & image(:,:,3) < 190;
-B = image(:,:,1) < 120 & image(:,:,2) < 135 & image(:,:,3) >= 80;
+B = image(:,:,1) < 120 & image(:,:,2) < 135 & image(:,:,3) >= 70;
 
 %clean up masks
 junksize = 300;
