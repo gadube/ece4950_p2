@@ -20,9 +20,9 @@ G = imfill(G,'holes');
 Y = imfill(Y,'holes');
 B = imfill(B,'holes');
 
-figure();
-imshow(gameState.img.clean);
-title("CLEANED");
+% figure();
+% imshow(gameState.img.clean);
+% title("CLEANED");
 % figure();
 % imshow(R);
 % title("RED MASK");
