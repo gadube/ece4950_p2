@@ -15,5 +15,5 @@ while 1
     wells(i,:) = state.wells;
     print_state(state,2);
     oldState = state;
-     pause(2);
+    pause(2);
 end
